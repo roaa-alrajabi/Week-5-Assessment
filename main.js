@@ -12,9 +12,14 @@ Ex:  hello(null) => null
 
 */
 
-function hello() {
+function hello(name) {
   // WRITE YOUR CODE UNDER THIS LINE  
-
+  if(name.length===0){
+    return null 
+  }
+  else {
+    console.log("hello"+name+"!")
+  }
 }
 
 
@@ -32,10 +37,13 @@ Ex: calculateTax(100,0.15)
 => "You got 100 JD from sales, you should pay 15 JD for tax and you will have 85 JD as net sales."
 */
 
-function calculateTax() {
+function calculateTax(sales,tax) {
   // WRITE YOUR CODE UNDER THIS LINE 
-
+       var tax = (tax*100)
+       var salary = (sales-tax)
+       console.log("You got"+sales+"JD from sales,you should pay"+(tax)+"JD for tax and you will have"+salary+"JD as net sales.")
 }
+
 
 
 /* Q3:
@@ -52,10 +60,24 @@ Ex: repeatChar("a",2); => "a, A"
 Ex: repeatChar("C",5); => "C, c, C, c, C"
 */
 
-function repeatChar() {
-  // WRITE YOUR CODE UNDER THIS LINE         
-
+function repeatChar(char,num) {
+  // WRITE YOUR CODE UNDER THIS LINE 
+  debugger
+     var result = ""
+    while (num>0) {
+    if(num%2===0){
+     result= char.toUpperCase()+","+result
+     num--
+    }
+    if(num%2!==0)
+     { 
+      result= char.toLowerCase()+","+result
+      
+     }
+     return result 
+  }
 }
+  
 
 
 /* Q4:
@@ -72,9 +94,11 @@ Ex: stringToCapital("Are you a student in coding ACADEMY by ORANGE ?")
 => "ARE YOU A STUDENT IN CODING ACADEMY BY ORANGE ?"
 */
 
-function stringToCapital() {
-  // WRITE YOUR CODE UNDER THIS LINE         
-
+function stringToCapital(str) {
+  // WRITE YOUR CODE UNDER THIS LINE 
+       if(str.length===0){
+         return str
+       }
+      return str *(str.lenght(toUpperCase()))
 }
 
-// Good luck :)
